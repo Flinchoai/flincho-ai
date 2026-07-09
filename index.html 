@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flincho AI</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#0f172a;
+color:white;
+text-align:center;
+padding:40px;
+}
+
+h1{
+font-size:50px;
+margin-top:40px;
+}
+
+p{
+font-size:20px;
+color:#cbd5e1;
+}
+
+button{
+margin-top:30px;
+padding:15px 35px;
+font-size:20px;
+background:#2563eb;
+color:white;
+border:none;
+border-radius:10px;
+}
+
+.features{
+margin-top:60px;
+display:grid;
+gap:20px;
+}
+
+.card{
+background:#1e293b;
+padding:20px;
+border-radius:15px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>🚀 Flincho AI</h1>
+
+<p>Write. Create. Grow.</p>
+
+<button>Get Started Free</button>
+
+<div class="features">
+
+<div class="card">
+🤖 AI Content Generator
+</div>
+
+<div class="card">
+🎨 AI Image Generator
+</div>
+
+<div class="card">
+📱 Social Media Assistant
+</div>
+
+<div class="card">
+📺 YouTube SEO Generator
+</div>
+
+</div>
+
+</body>
+</html> 
