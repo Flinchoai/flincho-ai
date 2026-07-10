@@ -54,3 +54,24 @@ if (sendBtn) {
         chatBox.scrollTop = chatBox.scrollHeight;
     });
 }
+const imageBtn = document.querySelector("#generateImageBtn");
+
+if (imageBtn) {
+
+    imageBtn.addEventListener("click", function () {
+
+        const prompt = document.querySelector("#imagePrompt").value.trim();
+        const result = document.querySelector("#imageResult");
+
+        if (prompt === "") {
+            result.innerHTML = "Please describe the image you want to create.";
+            return;
+        }
+
+        result.innerHTML =
+        "<h3>Image Prompt</h3><p>" + prompt +
+        "</p><br><strong>Coming Soon:</strong> Flincho AI will generate your image here.";
+
+    });
+
+}
