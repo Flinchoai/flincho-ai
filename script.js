@@ -75,3 +75,25 @@ if (imageBtn) {
     });
 
 }
+const socialBtn = document.querySelector("#generateSocialBtn");
+
+if (socialBtn) {
+
+    socialBtn.addEventListener("click", function () {
+
+        const prompt = document.querySelector("#socialPrompt").value.trim();
+        const output = document.querySelector("#socialOutput");
+
+        if (prompt === "") {
+            output.innerHTML = "Please enter your social media idea.";
+            return;
+        }
+
+        output.innerHTML =
+        "<h3>Generated Post</h3>" +
+        "<p><strong>Idea:</strong> " + prompt + "</p>" +
+        "<p><em>AI generation will be enabled after we connect the backend.</em></p>";
+
+    });
+
+}
