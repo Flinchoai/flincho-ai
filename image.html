@@ -1,1 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flincho AI Image Generator</title>
+<link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+
+<h1>🎨 AI Image Generator</h1>
+
+<p>Describe the image you want to create.</p>
+
+<textarea
+id="imagePrompt"
+placeholder="Example: A lion wearing sunglasses walking through Nairobi at sunset."
+style="width:90%;max-width:700px;height:120px;padding:15px;border-radius:10px;"></textarea>
+
+<br><br>
+
+<button id="generateImageBtn">Generate Image</button>
+
+<br><br>
+
+<div id="imageResult" class="card">
+Your generated image will appear here after we connect the AI image service.
+</div>
+
+<br>
+
+<a href="index.html">
+<button>⬅ Back Home</button>
+</a>
+
+<script src="script.js"></script>
+
+</body>
+</html>
