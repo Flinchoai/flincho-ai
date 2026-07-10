@@ -33,3 +33,24 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
+const sendBtn = document.querySelector("#sendBtn");
+
+if (sendBtn) {
+    sendBtn.addEventListener("click", function () {
+
+        const input = document.querySelector("#chatInput");
+        const chatBox = document.querySelector("#chatBox");
+
+        if (input.value.trim() === "") return;
+
+        chatBox.innerHTML +=
+            "<p><strong>You:</strong> " + input.value + "</p>";
+
+        chatBox.innerHTML +=
+            "<p><strong>Flincho AI:</strong> AI chat will work after we connect the AI service.</p>";
+
+        input.value = "";
+
+        chatBox.scrollTop = chatBox.scrollHeight;
+    });
+}
