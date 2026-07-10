@@ -97,3 +97,27 @@ if (socialBtn) {
     });
 
 }
+const youtubeBtn = document.querySelector("#generateYoutubeBtn");
+
+if (youtubeBtn) {
+
+    youtubeBtn.addEventListener("click", function () {
+
+        const prompt = document.querySelector("#youtubePrompt").value.trim();
+        const output = document.querySelector("#youtubeOutput");
+
+        if (prompt === "") {
+            output.innerHTML = "Please enter your YouTube video topic.";
+            return;
+        }
+
+        output.innerHTML =
+        "<h3>YouTube SEO Preview</h3>" +
+        "<p><strong>Topic:</strong> " + prompt + "</p>" +
+        "<p><strong>Title:</strong> Coming soon...</p>" +
+        "<p><strong>Description:</strong> AI will generate this after backend integration.</p>" +
+        "<p><strong>Tags:</strong> AI will generate optimized tags.</p>";
+
+    });
+
+}
