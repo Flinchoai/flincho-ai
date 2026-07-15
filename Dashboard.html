@@ -1,53 +1,72 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Flincho AI Dashboard</title>
-<link rel="stylesheet" href="style.css">
-</head>
+import { useNavigate } from "react-router-dom";
+import { signOut } from "firebase/auth";
+import { auth } from "../firebase";
 
-<body>
+export default function Dashboard() {
+  const navigate = useNavigate();
 
-<h1>🚀 Flincho AI Dashboard</h1>
+  const logout = async () => {
+    await signOut(auth);
+    navigate("/");
+  };
 
-<p>Welcome back! Choose an AI tool below.</p>
+  const cardStyle = {
+    background: "#1e293b",
+    color: "white",
+    padding: "20px",
+    borderRadius: "12px",
+    cursor: "pointer",
+    textAlign: "center" as const,
+    fontSize: "18px",
+  };
 
-<div class="features">
+  return (
+    <div
+      style={{
+        background: "#0f172a",
+        minHeight: "100vh",
+        color: "white",
+        padding: "20px",
+      }}
+    >
+      <h1>🚀 Flincho AI Dashboard</h1>
+      <p>Welcome! Choose a tool below.</p>
 
-<a href="chat.html" style="text-decoration:none;color:white;">
-<div class="card">💬 AI Chat</div>
-</a>
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(200px,1fr))",
+          gap: "20px",
+          marginTop: "30px",
+        }}
+      >
+        <div style={cardStyle} onClick={() => navigate("/chat")}>
+          💬 AI Chat
+        </div>
 
-<a href="writer.html" style="text-decoration:none;color:white;">
-<div class="card">✍️ AI Writer</div>
-</a>
+        <div style={cardStyle}>✍️ AI Writer</div>
 
-<a href="image.html" style="text-decoration:none;color:white;">
-<div class="card">🎨 AI Image Generator</div>
-</a>
+        <div style={cardStyle}>🎨 AI Image Generator</div>
 
-<a href="social.html" style="text-decoration:none;color:white;">
-<div class="card">📱 Social Media Generator</div>
-</a>
+        <div style={cardStyle}>📱 Social Media Generator</div>
 
-<a href="youtube.html" style="text-decoration:none;color:white;">
-<div class="card">📺 YouTube SEO Generator</div>
-</a>
+        <div style={cardStyle}>📺 YouTube SEO Generator</div>
 
-<a href="login.html" style="text-decoration:none;color:white;">
-<div class="card">👤 My Profile</div>
-</a>
+        <div style={cardStyle}>👤 Profile</div>
+      </div>
 
-</div>
-
-<br><br>
-
-<a href="index.html">
-<button>⬅ Home</button>
-</a>
-
-<script src="script.js"></script>
-
-</body>
-</html>
+      <button
+        onClick={logout}
+        style={{
+          marginTop: "40px",
+          padding: "12px 24px",
+          borderRadius: "8px",
+          border: "none",
+          cursor: "pointer",
+        }}
+      >
+        Logout
+      </button>
+    </div>
+  );
+}
